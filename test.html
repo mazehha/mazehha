@@ -1,112 +1,199 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recipe Name</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Page</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            background-color: #f8f8f8;
-        }
-        .container {
-            max-width: 600px;
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            margin: auto;
-        }
-        h1 {
-            color: #d35400;
-        }
-        img {
-            width: 100%;
-            border-radius: 10px;
-        }
-        ul {
-            padding-left: 20px;
-        }
-        .section {
-            margin-top: 20px;
-            padding: 10px;
-            background: #f0f0f0;
-            border-radius: 5px;
-        }
-        .tags {
-            margin-top: 20px;
-            padding: 10px;
-            background: #e0e0e0;
-            border-radius: 5px;
-        }
-        .tag {
-            display: inline-block;
-            background: #3498db;
-            color: white;
-            padding: 5px 10px;
-            margin: 5px;
-            border-radius: 5px;
-            font-size: 14px;
-        }
-        .back-link {
-            display: block;
-            margin-top: 20px;
-            text-decoration: none;
-            color: #3498db;
-        }
+        /* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Main container for the page */
+.recipe-container {
+  font-family: 'Arial', sans-serif;
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fafafa;
+}
+
+/* Recipe Header */
+.recipe-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.recipe-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.recipe-title {
+  font-size: 2em;
+  color: #333;
+  margin-top: 10px;
+}
+
+.recipe-other-names,
+.recipe-type {
+  font-size: 1.2em;
+  color: #666;
+  margin-top: 5px;
+}
+
+/* Ingredients Section */
+.ingredients {
+  margin-bottom: 30px;
+}
+
+.ingredients h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.ingredients ul {
+  list-style-type: none;
+  margin-bottom: 20px;
+}
+
+.ingredients li {
+  font-size: 1.1em;
+  color: #444;
+}
+
+/* Description Section */
+.description {
+  margin-bottom: 30px;
+}
+
+.description h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.description p {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Recipe Stages */
+.recipe-stages h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.recipe-stages ol {
+  list-style-type: decimal;
+  margin-left: 20px;
+}
+
+.recipe-stages li {
+  font-size: 1.1em;
+  color: #555;
+}
+
+/* Social Links and External Links */
+.social-links, .external-links {
+  margin-bottom: 30px;
+}
+
+.social-links h2, .external-links h2 {
+  font-size: 1.5em;
+  color: #333;
+}
+
+.social-links a, .external-links a {
+  color: #0077cc;
+  text-decoration: none;
+}
+
+.social-links a:hover, .external-links a:hover {
+  text-decoration: underline;
+}
+
+/* Hashtags Section */
+.hashtags h2 {
+  font-size: 1.5em;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.hashtags p {
+  font-size: 1.2em;
+  color: #444;
+}
+
     </style>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <h1>Recipe Name</h1>
-        <img src="recipe-image.jpg" alt="Recipe Image">
-        <p><strong>Description:</strong> A short description of the recipe.</p>
+  <div class="recipe-container">
+    <header class="recipe-header">
+      <img src="recipe-image.jpg" alt="Recipe Image" class="recipe-image">
+      <h1 class="recipe-title">Recipe Name (Khoresht Havij)</h1>
+      <p class="recipe-other-names"><strong>Other Names:</strong> Carrot Stew, Persian Stew</p>
+      <p class="recipe-type"><strong>Type of Dish:</strong> Main Course</p>
+    </header>
 
-        <h3>Ingredients:</h3>
-        <ul>
-            <li>Ingredient 1</li>
-            <li>Ingredient 2</li>
-            <li>Ingredient 3</li>
-        </ul>
+    <section class="ingredients">
+      <h2>Main Ingredients</h2>
+      <ul>
+        <li>Carrots</li>
+        <li>Beef</li>
+        <li>Tomatoes</li>
+        <!-- Add more ingredients here -->
+      </ul>
+      
+      <h2>Optional Ingredients</h2>
+      <ul>
+        <li>Potatoes</li>
+        <li>Spinach</li>
+        <!-- Add more optional ingredients here -->
+      </ul>
+    </section>
 
-        <h3>Instructions:</h3>
-        <p>Step-by-step instructions for making the recipe.</p>
+    <section class="description">
+      <h2>Short Description</h2>
+      <p>This Persian stew, Khoresht Havij, is a flavorful blend of tender beef, carrots, and a mix of herbs, slow-cooked to perfection.</p>
+    </section>
 
-        <!-- YouTube Section -->
-        <div class="section">
-            <h3>📺 YouTube Videos</h3>
-            <p>Watch related videos on YouTube:</p>
-            <a href="YOUTUBE_PLAYLIST_URL" target="_blank">📹 View Playlist</a>
-        </div>
+    <section class="recipe-stages">
+      <h2>Recipe Stages (Short)</h2>
+      <ol>
+        <li>Prepare the vegetables and meat.</li>
+        <li>Cook the meat until tender.</li>
+        <li>Add carrots, tomato paste, and spices.</li>
+        <li>Simmer until everything is cooked together.</li>
+      </ol>
+    </section>
 
-        <!-- Instagram Section -->
-        <div class="section">
-            <h3>📸 Instagram Posts</h3>
-            <p>See related posts on Instagram:</p>
-            <a href="INSTAGRAM_HIGHLIGHT_URL" target="_blank">📷 View Highlight</a>
-        </div>
+    <section class="social-links">
+      <h2>Related Links</h2>
+      <p><strong>YouTube Playlist:</strong> <a href="https://www.youtube.com/playlist?list=XXXXXXXXX" target="_blank">Watch the full recipe on YouTube</a></p>
+      <p><strong>Instagram Highlight:</strong> <a href="https://www.instagram.com/highlight/XXXXXXXXX" target="_blank">See the Instagram highlight</a></p>
+    </section>
 
-        <!-- Web Links Section -->
-        <div class="section">
-            <h3>🌍 Web Links</h3>
-            <p>Other online sources for this recipe:</p>
-            <ul>
-                <li><a href="WEB_SOURCE_1" target="_blank">🌐 Source 1</a></li>
-                <li><a href="WEB_SOURCE_2" target="_blank">🌐 Source 2</a></li>
-            </ul>
-        </div>
+    <section class="external-links">
+      <h2>Other Related Recipes</h2>
+      <ul>
+        <li><a href="https://www.website1.com">Website 1</a></li>
+        <li><a href="https://www.website2.com">Website 2</a></li>
+        <li><a href="https://www.website3.com">Website 3</a></li>
+        <!-- Add more links as needed -->
+      </ul>
+    </section>
 
-        <!-- Tags Section -->
-        <div class="tags">
-            <h3>🏷 Tags</h3>
-            <span class="tag">Tag 1</span>
-            <span class="tag">Tag 2</span>
-            <span class="tag">Tag 3</span>
-        </div>
-
-        <a href="index.html" class="back-link">⬅ Back to Home</a>
-    </div>
+    <section class="hashtags">
+      <h2>Hashtags</h2>
+      <p>#KhoreshtHavij #PersianStew #CarrotStew #IranianCuisine #DeliciousPersianFood</p>
+    </section>
+  </div>
 </body>
 </html>
