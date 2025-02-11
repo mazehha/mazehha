@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recipe Page</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #fff5f3;
+            color: #333;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* Header Styles */
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .recipe-name {
+            font-size: 2.8rem;
+            margin: 0;
+            color: #ff6f61;
+        }
+
+        .other-names {
+            font-size: 1.1rem;
+            color: #666;
+            font-style: italic;
+            margin: 5px 0;
+        }
+
+        .dish-type {
+            display: inline-block;
+            background: #ff6f61;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-size: 0.9rem;
+            margin-top: 10px;
+        }
+
+        /* Image Section */
+        .image-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .main-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .step-images {
+            display: grid;
+            gap: 15px;
+        }
+
+        .step-images img {
+            width: 100%;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .step-images img:hover {
+            transform: scale(1.03);
+        }
+
+        /* Content Section */
+        .content-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+        }
+
+        .ingredients-box, .instructions-box {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+        }
+
+        h3.section-title {
+            color: #ff6f61;
+            margin-top: 0;
+            font-size: 1.5rem;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 10px;
+        }
+
+        .ingredients-list, .instructions-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ingredients-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #eee;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .instructions-list li {
+            padding: 15px 0;
+            counter-increment: step-counter;
+            display: flex;
+            gap: 15px;
+        }
+
+        .instructions-list li::before {
+            content: counter(step-counter);
+            background: #ff6f61;
+            color: white;
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+        }
+
+        /* Social & Links Section */
+        .social-section {
+            margin-top: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+        }
+
+        .hashtags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 25px;
+        }
+
+        .hashtag {
+            background: #ffe8e6;
+            color: #ff6f61;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .social-button {
+            display: flex;
+            align-items: center;
+            padding: 12px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            color: white;
+            transition: transform 0.2s ease;
+        }
+
+        .social-button.youtube {
+            background: #ff0000;
+        }
+
+        .social-button.instagram {
+            background: #e1306c;
+        }
+
+        .social-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .external-links {
+            margin-top: 25px;
+            padding-top: 25px;
+            border-top: 1px solid #eee;
+        }
+
+        .external-links a {
+            color: #ff6f61;
+            text-decoration: none;
+            display: block;
+            margin: 10px 0;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .image-section, .content-section {
+                grid-template-columns: 1fr;
+            }
+            
+            .recipe-name {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <h1 class="recipe-name">Classic Spaghetti Carbonara</h1>
+            <p class="other-names">Roman Carbonara • Pasta Carbonara</p>
+            <span class="dish-type">Italian Main Course</span>
+        </header>
+
+        <!-- Image Section -->
+        <section class="image-section">
+            <div class="main-image">
+                <img src="https://example.com/dish-image.jpg" alt="Finished Carbonara Dish">
+            </div>
+            <div class="step-images">
+                <img src="https://example.com/step1.jpg" alt="Step 1">
+                <img src="https://example.com/step2.jpg" alt="Step 2">
+                <img src="https://example.com/step3.jpg" alt="Step 3">
+            </div>
+        </section>
+
+        <!-- Content Section -->
+        <section class="content-section">
+            <div class="ingredients-box">
+                <h3 class="section-title">Ingredients</h3>
+                <ul class="ingredients-list">
+                    <li>🥓 Pancetta (200g)</li>
+                    <li>🍝 Spaghetti (400g)</li>
+                    <li>🥚 Eggs (3 large)</li>
+                    <li>🧀 Pecorino Romano (100g)</li>
+                    <li>🧄 Garlic (2 cloves)</li>
+                    <li>🌶️ Black Pepper</li>
+                </ul>
+            </div>
+
+            <div class="instructions-box">
+                <h3 class="section-title">Instructions</h3>
+                <ol class="instructions-list">
+                    <li>Cook spaghetti in salted boiling water</li>
+                    <li>Fry pancetta with garlic until crispy</li>
+                    <li>Whisk eggs and cheese together</li>
+                    <li>Combine all ingredients while hot</li>
+                    <li>Toss vigorously to create creamy sauce</li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- Social Section -->
+        <section class="social-section">
+            <div class="hashtags">
+                <span class="hashtag">#Carbonara</span>
+                <span class="hashtag">#ItalianFood</span>
+                <span class="hashtag">#PastaLover</span>
+                <span class="hashtag">#QuickMeals</span>
+            </div>
+
+            <div class="social-links">
+                <a href="#" class="social-button youtube">▶️ YouTube Tutorial</a>
+                <a href="#" class="social-button instagram">📸 Instagram Guide</a>
+            </div>
+
+            <div class="external-links">
+                <a href="https://foodnetwork.com/recipe">Food Network Version</a>
+                <a href="https://bbcgoodfood.com/recipe">BBC Good Food</a>
+                <a href="https://allrecipes.com/recipe">AllRecipes Version</a>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
